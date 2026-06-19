@@ -1,244 +1,25 @@
-#RTL Design and Verification of an 8-bit ALU in SystemVerilog
+# RTL Design and Verification of an 8-Bit ALU in SystemVerilog
 
+This project implements an 8-bit Arithmetic Logic Unit (ALU) in SystemVerilog and verifies its functionality using a self-checking testbench in AMD Vivado XSim. The objective was to gain hands-on experience with RTL design, combinational logic implementation, and verification workflows commonly used in FPGA and ASIC development.
 
+The ALU supports a range of arithmetic and logical operations including addition, bitwise AND, bitwise XOR, load accumulator, store accumulator, jump, halt, and skip-if-zero instructions. Alongside the RTL implementation, a dedicated testbench was developed to exercise each operation and compare generated outputs against expected behavior.
 
-##Overview
+Development and verification were carried out using AMD Vivado's XSim simulator. Simulation results confirmed correct functionality across all supported operations, with the testbench reporting a successful pass for all validation checks.
 
+This project helped reinforce key digital design concepts such as opcode-based control logic, combinational datapath design, testbench construction, simulation debugging, and functional verification using SystemVerilog.
 
+## Repository Contents
 
-This project implements an 8-bit Arithmetic Logic Unit (ALU) in SystemVerilog and verifies its functionality using a self-checking testbench in AMD Vivado XSim.
+- `rtl/` contains the ALU RTL source code and supporting type definitions.
+- `tb/` contains the SystemVerilog testbench used for verification.
+- `sim/` contains simulation artifacts and example output screenshots.
 
+## Tools Used
 
+- SystemVerilog
+- AMD Vivado
+- XSim Simulator
 
-The design demonstrates RTL development, simulation, and functional verification techniques commonly used in FPGA and ASIC design flows.
+## Skills Demonstrated
 
-
-
-\---
-
-
-
-\## Supported Operations
-
-
-
-| Opcode | Operation |
-
-|----------|----------|
-
-| HLT | Halt |
-
-| SKZ | Skip if Zero |
-
-| ADD | Addition |
-
-| AND | Bitwise AND |
-
-| XOR | Bitwise XOR |
-
-| LDA | Load Accumulator |
-
-| STO | Store Accumulator |
-
-| JMP | Jump |
-
-
-
-\---
-
-
-
-\## Project Structure
-
-
-
-```text
-
-systemverilog-alu/
-
-│
-
-├── rtl/
-
-│   ├── alu.sv
-
-│   └── typedefs.sv
-
-│
-
-├── tb/
-
-│   └── alu\_test.sv
-
-│
-
-├── sim/
-
-│   └── simulation\_output.png
-
-│
-
-├── README.md
-
-└── .gitignore
-
-```
-
-
-
-\---
-
-
-
-\## Design Overview
-
-
-
-Inputs:
-
-\- Opcode
-
-\- Data
-
-
-
-Outputs:
-
-\- ALU Result
-
-\- Zero Flag
-
-
-
-```text
-
-&#x20;         opcode,data
-
-&#x20;              │
-
-&#x20;              ▼
-
-&#x20;       +-------------+
-
-&#x20;       |     ALU     |
-
-&#x20;       +-------------+
-
-&#x20;              │
-
-&#x20;              ▼
-
-&#x20;       result, zero
-
-```
-
-
-
-\---
-
-
-
-\## Simulation Environment
-
-
-
-\- Language: SystemVerilog
-
-\- Simulator: AMD Vivado XSim
-
-\- Time Unit: 1 ns
-
-\- Time Precision: 100 ps
-
-
-
-\---
-
-
-
-\## Compilation and Simulation
-
-
-
-Compile:
-
-
-
-```bash
-
-xvlog -sv rtl/typedefs.sv rtl/alu.sv tb/alu\_test.sv
-
-```
-
-
-
-Elaborate:
-
-
-
-```bash
-
-xelab alu\_test -s sim
-
-```
-
-
-
-Run:
-
-
-
-```bash
-
-xsim sim -runall
-
-```
-
-
-
-\---
-
-
-
-\## Verification
-
-
-
-The self-checking testbench validates all supported ALU operations and compares actual outputs against expected results.
-
-
-
-Simulation concludes with:
-
-
-
-```text
-
-ALU TEST PASSED
-
-```
-
-
-
-\---
-
-
-
-\## Skills Demonstrated
-
-
-
-\- RTL Design
-
-\- SystemVerilog
-
-\- Functional Verification
-
-\- Testbench Development
-
-\- FPGA Design Flow
-
-\- Vivado XSim Simulation
-
-\- Digital Logic Design
-
+RTL Design • SystemVerilog • Functional Verification • Testbench Development • FPGA Design Flow • Digital Logic Design
