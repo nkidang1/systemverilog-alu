@@ -1,8 +1,8 @@
-\# RTL Design and Verification of an 8-bit ALU in SystemVerilog
+#RTL Design and Verification of an 8-bit ALU in SystemVerilog
 
 
 
-\## Overview
+##Overview
 
 
 
