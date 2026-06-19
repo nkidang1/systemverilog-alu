@@ -6,8 +6,6 @@ The ALU supports a range of arithmetic and logical operations including addition
 
 Development and verification were carried out using AMD Vivado's XSim simulator. Simulation results confirmed correct functionality across all supported operations, with the testbench reporting a successful pass for all validation checks.
 
-This project helped reinforce key digital design concepts such as opcode-based control logic, combinational datapath design, testbench construction, simulation debugging, and functional verification using SystemVerilog.
-
 ## Repository Contents
 
 - `rtl/` contains the ALU RTL source code and supporting type definitions.
